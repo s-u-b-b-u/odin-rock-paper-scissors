@@ -11,3 +11,12 @@ function getComputerChoice() {
 
     return computerChoice;
 }
+
+// Step 2: Write the logic to get the human choice
+function getHumanChoice() {
+
+    const humanChoice = prompt("Enter your choice \n Available options 1.Rock 2.Paper 3.Scissor");
+
+    return humanChoice.toUpperCase();
+}
+
