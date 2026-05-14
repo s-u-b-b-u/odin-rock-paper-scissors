@@ -53,3 +53,29 @@ function calculateResult(humanChoice, computerChoice) {
     }
 }
 
+
+// Step 5: Write the logic to play the entire game
+
+
+function playGame() {
+
+    function playRound() {
+    
+        const computerChoice = getComputerChoice();
+    
+        const humanChoice = getHumanChoice();
+    
+        const result = calculateResult(humanChoice, computerChoice);
+    
+        console.log( "Computer Choice:",computerChoice, "----- Human Choice:", humanChoice
+            , "\nHuman Score: ", humanScore, "----Computer Score: ", computerScore,
+            "\n\n -----", result, "------"
+        );
+    }
+
+    for (let round = 0; round < MAX_ROUNDS; round++) {
+        playRound();
+    }
+}
+
+playGame();
