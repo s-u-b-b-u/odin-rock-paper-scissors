@@ -23,3 +23,33 @@ function getHumanChoice() {
 // Step 3: Declare the players score variables
 let humanScore = 0;
 let computerScore = 0;
+
+// Step 4: Write the logic to play a single round
+
+function calculateResult(humanChoice, computerChoice) {
+
+    if (humanChoice === computerChoice) {
+        return "Tie!";
+    }else if (humanChoice === "ROCK" && computerChoice === "PAPER"){
+        computerScore += 1;
+        return "YOU LOSE";
+    }else if (humanChoice === "PAPER" && computerChoice === "ROCK") {
+        humanChoice += 1;
+        return "YOU WON!!!!!"
+    }else if (humanChoice === "ROCK" && computerChoice === "SCISSOR") {
+        humanChoice += 1;
+        return "YOU WON!!!!!";
+    } else if(humanChoice === "SCISSOR" && computerChoice === "ROCK") {
+        computerChoice += 1;
+        return "YOU LOSE";
+    }else if(humanChoice === "PAPER" && computerChoice === "SCISSOR") {
+        computerChoice += 1;
+        return "YOU LOSE";
+    }else if (humanChoice === "SCISSOR" && computerChoice === "PAPER") {
+        humanChoice += 1;
+        return "YOU WON!!!!!";
+    }else{
+        return "Enter correct input / Check spelling";
+    }
+}
+
